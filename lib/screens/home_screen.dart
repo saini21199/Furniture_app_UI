@@ -79,9 +79,10 @@ class HomeScreen extends StatelessWidget {
 
   Widget buildSearchBar() {
     return Positioned(
-      top: 240.0,
-      right: 0.0,
-      left: 0.0,
+      top: 210.0,
+      bottom: -210.0,
+      left: -1.0,
+      right: 1.0,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 30.0),
         child: TextFormField(
@@ -108,119 +109,119 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget buildCategoryBar() {
-    return Positioned(
-      top: 320.0,
-      left: 1.0,
-      right: 1.0,
-      child: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-                color: Color.fromRGBO(240, 240, 240, 1.0),
-                spreadRadius: 3.0,
-                blurRadius: 5.0)
+    return Container(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+              color: Color.fromRGBO(240, 240, 240, 1.0),
+              spreadRadius: 3.0,
+              blurRadius: 5.0)
+        ],
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(8.0), topRight: Radius.circular(8.0)),
+      ),
+      padding: EdgeInsets.symmetric(vertical: 5.0),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Row(
+          children: <Widget>[
+            SizedBox(
+              width: 10.0,
+            ),
+            Column(
+              children: <Widget>[
+                Image.asset(
+                  'assets/sofas.png',
+                  scale: 5.0,
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                Text(
+                  'Sofas',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            SizedBox(
+              width: 40.0,
+            ),
+            Column(
+              children: <Widget>[
+                Image.asset(
+                  'assets/dresser.png',
+                  scale: 5.0,
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                Text(
+                  'Wardrobe',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            SizedBox(
+              width: 40.0,
+            ),
+            Column(
+              children: <Widget>[
+                Image.asset(
+                  'assets/desks.png',
+                  scale: 5.0,
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                Text(
+                  'Desk',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            SizedBox(
+              width: 40.0,
+            ),
+            Column(
+              children: <Widget>[
+                Image.asset(
+                  'assets/dressers.png',
+                  scale: 5.0,
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                Text(
+                  'Dresser',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
           ],
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(8.0), topRight: Radius.circular(8.0)),
-        ),
-        padding: EdgeInsets.symmetric(vertical: 5.0),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: Row(
-            children: <Widget>[
-              SizedBox(
-                width: 10.0,
-              ),
-              Column(
-                children: <Widget>[
-                  Image.asset(
-                    'assets/sofas.png',
-                    scale: 5.0,
-                  ),
-                  SizedBox(
-                    height: 4.0,
-                  ),
-                  Text(
-                    'Sofas',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-              SizedBox(
-                width: 40.0,
-              ),
-              Column(
-                children: <Widget>[
-                  Image.asset(
-                    'assets/dresser.png',
-                    scale: 5.0,
-                  ),
-                  SizedBox(
-                    height: 4.0,
-                  ),
-                  Text(
-                    'Wardrobe',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-              SizedBox(
-                width: 40.0,
-              ),
-              Column(
-                children: <Widget>[
-                  Image.asset(
-                    'assets/desks.png',
-                    scale: 5.0,
-                  ),
-                  SizedBox(
-                    height: 4.0,
-                  ),
-                  Text(
-                    'Desk',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-              SizedBox(
-                width: 40.0,
-              ),
-              Column(
-                children: <Widget>[
-                  Image.asset(
-                    'assets/dressers.png',
-                    scale: 5.0,
-                  ),
-                  SizedBox(
-                    height: 4.0,
-                  ),
-                  Text(
-                    'Dresser',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-            ],
-          ),
         ),
       ),
     );
   }
 
   Widget buildMainContent() {
-    return Positioned(
-      top: 410.0,
-      left: -1.0,
-      right: 1.0,
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
       child: Container(
         height: 185.0,
         padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
-        color: Color.fromRGBO(255, 255, 255, 1.0),
+        decoration: BoxDecoration(
+            color: Color.fromRGBO(255, 255, 255, 1.0),
+            boxShadow: [
+              BoxShadow(
+                  color: Color.fromRGBO(218, 218, 218, 1.0),
+                  blurRadius: 10.0,
+                  spreadRadius: 2.0),
+            ]),
         child: Row(
           children: <Widget>[
             Column(
-              children: <Widget>[Image.asset('assets/ottoman.jpg', scale: 2.5)],
+              children: <Widget>[Image.asset('assets/ottoman.jpg', scale: 3.0)],
             ),
             SizedBox(width: 10.0),
             Expanded(
@@ -300,88 +301,101 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget buildMainContent1() {
-    return Positioned(
-      top: 600.0,
-      left: -1.0,
-      right: 1.0,
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
       child: Container(
         height: 185.0,
         padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
-        color: Color.fromRGBO(255, 255, 255, 1.0),
+        decoration: BoxDecoration(
+            color: Color.fromRGBO(255, 255, 255, 1.0),
+            boxShadow: [
+              BoxShadow(
+                  color: Color.fromRGBO(218, 218, 218, 1.0),
+                  blurRadius: 10.0,
+                  spreadRadius: 2.0),
+            ]),
         child: Row(
           children: <Widget>[
             Column(
-              children: <Widget>[Image.asset('assets/anotherchair.jpg', scale: 2.5)],
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8.0, 20.0, 0.0, 13.0),
+                  child: Image.asset('assets/anotherchair.jpg', scale: 2.5),
+                )
+              ],
             ),
             SizedBox(width: 10.0),
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        'FinnNavion',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 18.0),
-                      ),
-                      SizedBox(
-                        width: 35.0,
-                        height: 25.0,
-                        child: FloatingActionButton(
-                          onPressed: () {},
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            'assets/heart.png',
-                            scale: 3.0,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 2.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'FinnNavion',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400, fontSize: 18.0),
+                        ),
+                        SizedBox(
+                          width: 35.0,
+                          height: 25.0,
+                          child: FloatingActionButton(
+                            onPressed: () {},
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              'assets/heart.png',
+                              scale: 3.0,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Text(
+                      'Scondinavian small size double sofa imported full leather /Dale Italia oil wax leather block',
+                      style: TextStyle(
+                          color: Color.fromRGBO(218, 218, 218, 1.0),
+                          fontSize: 14.0),
+                    ),
+                    SizedBox(
+                      height: 19.0,
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          color: Color.fromRGBO(249, 195, 53, 1.0),
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            '240',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0),
                           ),
                         ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Text(
-                    'Scondinavian small size double sofa imported full leather /Dale Italia oil wax leather block',
-                    style: TextStyle(
-                        color: Color.fromRGBO(218, 218, 218, 1.0),
-                        fontSize: 14.0),
-                  ),
-                  SizedBox(
-                    height: 19.0,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Container(
-                        color: Color.fromRGBO(249, 195, 53, 1.0),
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          '240',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18.0),
-                        ),
-                      ),
-                      Container(
-                        color: Color.fromRGBO(254, 221, 89, 1.0),
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'Add to Cart',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18.0),
-                        ),
-                      )
-                    ],
-                  )
-                ],
+                        Container(
+                          color: Color.fromRGBO(254, 221, 89, 1.0),
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Add to Cart',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             )
           ],
@@ -390,28 +404,148 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildBody() {
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: <Widget>[
-        buildHeader(),
-        buildSearchBar(),
-        buildCategoryBar(),
-        buildMainContent(),
-        buildMainContent1()
-      ],
+  Widget buildMainContent2() {
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Container(
+        height: 185.0,
+        padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
+        decoration: BoxDecoration(
+            color: Color.fromRGBO(255, 255, 255, 1.0),
+            boxShadow: [
+              BoxShadow(
+                  color: Color.fromRGBO(218, 218, 218, 1.0),
+                  blurRadius: 10.0,
+                  spreadRadius: 2.0),
+            ]),
+        child: Row(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8.0, 20.0, 0.0, 13.0),
+                  child: Image.asset(
+                    'assets/bed.jpg',
+                    width: 130.0,
+                    height: 145.0,
+                  ),
+                )
+              ],
+            ),
+            SizedBox(width: 10.0),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 2.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'FinnNavion',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400, fontSize: 18.0),
+                        ),
+                        SizedBox(
+                          width: 35.0,
+                          height: 25.0,
+                          child: FloatingActionButton(
+                            onPressed: () {},
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              'assets/heart.png',
+                              scale: 3.0,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Text(
+                      'Scondinavian small size double sofa imported full leather /Dale Italia oil wax leather block',
+                      style: TextStyle(
+                          color: Color.fromRGBO(218, 218, 218, 1.0),
+                          fontSize: 14.0),
+                    ),
+                    SizedBox(
+                      height: 19.0,
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          color: Color.fromRGBO(249, 195, 53, 1.0),
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            '240',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0),
+                          ),
+                        ),
+                        Container(
+                          color: Color.fromRGBO(254, 221, 89, 1.0),
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Add to Cart',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
+        body: Stack(
       children: <Widget>[
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: buildBody(),
+        buildSearchBar(),
+        Column(
+          children: <Widget>[
+            buildHeader(),
+            
+            SizedBox(
+              height: 15.0,
+            ),
+            // buildSearchBar(),
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  buildCategoryBar(),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  buildMainContent(),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  buildMainContent1(),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  buildMainContent2()
+                ],
+              ),
+            )
+          ],
         ),
       ],
     ));
