@@ -73,6 +73,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+        buildSearchBar()
       ],
     );
   }
@@ -521,11 +522,9 @@ class HomeScreen extends StatelessWidget {
         Column(
           children: <Widget>[
             buildHeader(),
-            
             SizedBox(
               height: 15.0,
             ),
-            // buildSearchBar(),
             Expanded(
               child: ListView(
                 children: <Widget>[
@@ -547,7 +546,18 @@ class HomeScreen extends StatelessWidget {
             )
           ],
         ),
+        
       ],
-    ));
+    ),
+    bottomNavigationBar: 
+      BottomNavigationBar(
+      items:  [
+        BottomNavigationBarItem(icon: Icon(Icons.home,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text('')),
+        BottomNavigationBarItem(icon: Icon(Icons.timelapse,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text('')),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text('')),
+        BottomNavigationBarItem(icon: Icon(Icons.short_text,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text(''))
+
+      ])
+      );
   }
 }
