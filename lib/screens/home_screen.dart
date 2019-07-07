@@ -80,8 +80,8 @@ class HomeScreen extends StatelessWidget {
 
   Widget buildSearchBar() {
     return Positioned(
-      top: 210.0,
-      bottom: -210.0,
+      top: 225.0,
+      bottom: -200.0,
       left: -1.0,
       right: 1.0,
       child: Padding(
@@ -517,47 +517,55 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-      children: <Widget>[
-        buildSearchBar(),
-        Column(
           children: <Widget>[
-            buildHeader(),
-            SizedBox(
-              height: 15.0,
+            buildSearchBar(),
+            Column(
+              children: <Widget>[
+                buildHeader(),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Expanded(
+                  child: ListView(
+                    children: <Widget>[
+                      buildCategoryBar(),
+                      SizedBox(
+                        height: .0,
+                      ),
+                      buildMainContent(),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      buildMainContent1(),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      buildMainContent2()
+                    ],
+                  ),
+                )
+              ],
             ),
-            Expanded(
-              child: ListView(
-                children: <Widget>[
-                  buildCategoryBar(),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  buildMainContent(),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                  buildMainContent1(),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                  buildMainContent2()
-                ],
-              ),
-            )
           ],
         ),
-        
-      ],
-    ),
-    bottomNavigationBar: 
-      BottomNavigationBar(
-      items:  [
-        BottomNavigationBarItem(icon: Icon(Icons.home,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text('')),
-        BottomNavigationBarItem(icon: Icon(Icons.timelapse,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text('')),
-        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text('')),
-        BottomNavigationBarItem(icon: Icon(Icons.short_text,color: Color.fromRGBO(196, 196, 196, 1.0)),title: Text(''))
-
-      ])
-      );
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home, color: Color.fromRGBO(196, 196, 196, 1.0)),
+              title: Text('')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.timelapse,
+                  color: Color.fromRGBO(196, 196, 196, 1.0)),
+              title: Text('')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart,
+                  color: Color.fromRGBO(196, 196, 196, 1.0)),
+              title: Text('')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.short_text,
+                  color: Color.fromRGBO(196, 196, 196, 1.0)),
+              title: Text(''))
+        ]));
   }
 }
