@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
 
   Widget buildSearchBar() {
     return Positioned(
-      top: 225.0,
+      top: 210.0,
       bottom: -200.0,
       left: -1.0,
       right: 1.0,
@@ -126,6 +126,7 @@ class HomeScreen extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
               width: 10.0,
